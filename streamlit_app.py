@@ -20,6 +20,8 @@ fruit_show = my_fruit_list.loc[fruit_selected]
 streamlit.dataframe(fruit_show)
 
 streamlit.header("Fruityvice Fruit Advice!")
+
+fruit_choice = streamlit.text_input('What fruit would you like information about?','Kiwi')
 #fruityvice_response = requests.get("https://fruityvice.com/api/fruit/watermelon")
 fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + "kiwi")
 ## asked to delete streamlit.text(fruityvice_response.json())
@@ -30,7 +32,7 @@ fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
 # write your own comment - what does this do?
 streamlit.dataframe(fruityvice_normalized)
 
-fruit_choice = streamlit.text_input('What fruit would you like information about?','Kiwi')
+
 streamlit.write('The user entered ', fruit_choice)
 
 
