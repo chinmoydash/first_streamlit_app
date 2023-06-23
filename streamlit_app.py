@@ -1,7 +1,7 @@
 import streamlit
 import pandas
 import requests
-import snowflake.connector 
+
 
 streamlit.title("My healthy dinner")
 
@@ -39,5 +39,10 @@ streamlit.dataframe(fruityvice_normalized)
 
 
 streamlit.write('The user entered ', fruit_choice)
+
+import snowflake.connector 
+
+
+
 
 
