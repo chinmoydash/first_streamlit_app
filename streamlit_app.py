@@ -40,13 +40,13 @@ try:
         back_from_function = get_fruitvice_data(fruit_choice)
         streamlit.dataframe(back_from_function)
   
-#except URLError as e:
-# streamlit.error()
+except URLError as e:
+   streamlit.error()
 #streamlit.write('The user entered ', fruit_choice)
 #streamlit.write('The user entered ', fruit_choice)
 #streamlit.stop()
 
-#streamlit.header("The fruit list contains :")
+streamlit.header("The fruit list contains :")
 # snowflake related function 
 def get_fruit_load_list():
   with my_cnx.cursor() as my_cur:
